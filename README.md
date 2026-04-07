@@ -12,4 +12,4 @@ Private preview repository for visual and functional validation before productio
 - no sensitive source logic
 - no internal business documentation
 - preview-only assets
-- 
+ 

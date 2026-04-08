@@ -7,26 +7,43 @@
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <p class="eyebrow">Navigation</p>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Fermer le menu">→</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#overview">Vue générale</a>
+      <a href="#flow">Parcours produit</a>
+      <a href="#screens">Écrans cibles</a>
+      <a href="#notes">Notes UI</a>
+    </nav>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
   <main class="shell">
-    <header class="hero hero-grid">
+    <header class="hero hero-grid" id="overview">
       <div>
-        <p class="eyebrow">Preview Environment — V4</p>
+        <p class="eyebrow">Preview Environment — V5</p>
         <h1>Jobflow Studio Preview</h1>
-        <p class="lead">Espace de validation interne pour observer l’interface, les flux et les futurs écrans du produit avant passage vers le site final.</p>
+        <p class="lead">Prévisualisation avec navigation latérale déployable, pensée comme base UI pour le produit et le futur site.</p>
       </div>
       <aside class="hero-panel">
         <p class="panel-label">Mission</p>
-        <h2>Valider le produit avant diffusion</h2>
+        <h2>Valider le produit et sa navigation</h2>
         <ul class="panel-list">
-          <li>Tester l’ordre des écrans</li>
-          <li>Tester la lisibilité des blocs</li>
-          <li>Préparer les futurs modules</li>
-          <li>Garder le core hors exposition directe</li>
+          <li>Tester une navigation simple et stable</li>
+          <li>Garder le menu accessible en continu</li>
+          <li>Préparer une UI plus mobile-friendly</li>
+          <li>Servir de base aux prochaines pages</li>
         </ul>
       </aside>
     </header>
 
-    <section class="section">
+    <section class="section" id="flow">
       <div class="section-head">
         <p class="eyebrow">Parcours produit</p>
         <h2>Vue d’ensemble du flux</h2>
@@ -35,27 +52,27 @@
         <article class="step">
           <span class="step-index">01</span>
           <h3>Upload</h3>
-          <p>Zone future d’import des fichiers et des éléments utiles.</p>
+          <p>Import des éléments et préparation du contexte.</p>
         </article>
         <article class="step">
           <span class="step-index">02</span>
           <h3>Analyse</h3>
-          <p>Zone future d’extraction, structuration et lecture des données.</p>
+          <p>Lecture, structuration et synthèse des données utiles.</p>
         </article>
         <article class="step">
           <span class="step-index">03</span>
           <h3>Génération</h3>
-          <p>Zone future des variantes et sorties utilisables.</p>
+          <p>Création de variantes et de sorties réutilisables.</p>
         </article>
         <article class="step">
           <span class="step-index">04</span>
           <h3>Contrôle</h3>
-          <p>Zone future de vérification et d’amélioration des résultats.</p>
+          <p>Vérification, ajustement et amélioration des résultats.</p>
         </article>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="screens">
       <div class="section-head">
         <p class="eyebrow">Écrans cibles</p>
         <h2>Blocs à prototyper ensuite</h2>
@@ -64,22 +81,39 @@
         <article class="card">
           <span class="tag">Écran</span>
           <h3>Dashboard</h3>
-          <p>Vue globale, état des projets et accès rapide aux modules.</p>
+          <p>Vue globale, état d’avancement et accès rapide aux modules.</p>
         </article>
         <article class="card">
           <span class="tag">Écran</span>
           <h3>Profil structuré</h3>
-          <p>Lecture propre des éléments extraits et des informations utiles.</p>
+          <p>Lecture propre des informations extraites et mises en valeur.</p>
         </article>
         <article class="card">
           <span class="tag">Écran</span>
           <h3>Cible structurée</h3>
-          <p>Lecture claire des attentes et des priorités de la cible visée.</p>
+          <p>Lecture claire des attentes et des critères importants.</p>
         </article>
         <article class="card">
           <span class="tag">Écran</span>
           <h3>Comparaison</h3>
-          <p>Écart entre profil et cible, avec signaux visuels simples.</p>
+          <p>Écart entre profil et cible avec signaux visuels simples.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <div class="section-head">
+        <p class="eyebrow">Notes UI</p>
+        <h2>Décisions à conserver</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Menu toujours accessible</h3>
+          <p>Le bouton menu reste présent et ouvre une navigation latérale repliable.</p>
+        </article>
+        <article class="card">
+          <h3>Base mobile</h3>
+          <p>Le système est pensé pour pouvoir glisser vers une navigation plus tactile par la suite.</p>
         </article>
       </div>
     </section>

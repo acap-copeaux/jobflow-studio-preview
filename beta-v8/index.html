@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobflow Studio Beta V8</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <button id="toTopBtn" class="to-top" aria-label="Remonter en haut">↑</button>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Beta Workspace — V8</p>
+        <h1>Jobflow Studio Beta V8</h1>
+        <p class="lead">Prototype local enrichi avec base d’identité, destinataire, type de document, style de rendu et aperçu visuel avant export.</p>
+      </div>
+    </header>
+
+    <section class="grid three-cols">
+      <article class="panel">
+        <h2>Identité</h2>
+        <div class="field"><label for="fullName">Nom / prénom</label><input id="fullName" type="text" /></div>
+        <div class="field"><label for="phone">Téléphone</label><input id="phone" type="text" /></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="text" /></div>
+        <div class="field"><label for="address">Adresse</label><textarea id="address" rows="4"></textarea></div>
+      </article>
+
+      <article class="panel">
+        <h2>Destinataire</h2>
+        <div class="field"><label for="recipientName">Nom du destinataire</label><input id="recipientName" type="text" /></div>
+        <div class="field"><label for="recipientCompany">Entreprise</label><input id="recipientCompany" type="text" /></div>
+        <div class="field"><label for="recipientAddress">Adresse</label><textarea id="recipientAddress" rows="4"></textarea></div>
+      </article>
+
+      <article class="panel">
+        <h2>Document</h2>
+        <div class="field"><label for="docType">Type</label><select id="docType"><option value="cv">CV</option><option value="letter">Lettre</option><option value="email">Email</option><option value="call">Script téléphonique</option><option value="interview">Préparation entretien</option></select></div>
+        <div class="field"><label for="renderStyle">Rendu</label><select id="renderStyle"><option value="sobriety">Sobre</option><option value="formal">Formel</option><option value="clear">Clair</option><option value="direct">Direct</option></select></div>
+        <div class="field"><label for="targetText">Contexte / cible</label><textarea id="targetText" rows="6"></textarea></div>
+      </article>
+    </section>
+
+    <section class="grid two-cols">
+      <article class="panel">
+        <h2>Source</h2>
+        <div class="field"><label for="sourceText">Texte de départ</label><textarea id="sourceText" rows="12"></textarea></div>
+        <div class="actions-row"><button id="buildBtn">Construire l’aperçu</button><button id="saveBtn" class="ghost">Sauvegarder</button><button id="resetBtn" class="ghost">Réinitialiser</button></div>
+      </article>
+      <article class="panel">
+        <h2>Actions</h2>
+        <div class="actions-col">
+          <button id="copyPreviewBtn">Copier le rendu</button>
+          <button id="downloadHtmlBtn" class="ghost">Exporter HTML</button>
+          <button id="printBtn" class="ghost">Ouvrir impression / PDF</button>
+        </div>
+        <div id="metaInfo" class="output-block small">Aucun aperçu généré.</div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Aperçu visuel</h2>
+      <div id="previewCard" class="preview-card">
+        <div class="preview-empty">Aucun document généré pour le moment.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

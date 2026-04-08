@@ -8,33 +8,80 @@
 </head>
 <body>
   <main class="shell">
-    <header class="hero">
-      <p class="eyebrow">Preview Environment — V3</p>
-      <h1>Jobflow Studio Preview</h1>
-      <p class="lead">Prévisualisation modulaire du produit avant passage en site final.</p>
+    <header class="hero hero-grid">
+      <div>
+        <p class="eyebrow">Preview Environment — V4</p>
+        <h1>Jobflow Studio Preview</h1>
+        <p class="lead">Espace de validation interne pour observer l’interface, les flux et les futurs écrans du produit avant passage vers le site final.</p>
+      </div>
+      <aside class="hero-panel">
+        <p class="panel-label">Mission</p>
+        <h2>Valider le produit avant diffusion</h2>
+        <ul class="panel-list">
+          <li>Tester l’ordre des écrans</li>
+          <li>Tester la lisibilité des blocs</li>
+          <li>Préparer les futurs modules</li>
+          <li>Garder le core hors exposition directe</li>
+        </ul>
+      </aside>
     </header>
 
-    <section class="grid">
-      <article class="card">
-        <span class="tag">Bloc</span>
-        <h3>Module A</h3>
-        <p>Premier espace de validation visuelle.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Bloc</span>
-        <h3>Module B</h3>
-        <p>Second espace de validation pour le flux produit.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Bloc</span>
-        <h3>Module C</h3>
-        <p>Zone destinée aux futurs écrans et composants.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Flux</span>
-        <h3>Core → Preview → Site</h3>
-        <p>Le core reste privé ; la preview sert à tester le rendu visible.</p>
-      </article>
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Parcours produit</p>
+        <h2>Vue d’ensemble du flux</h2>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="step-index">01</span>
+          <h3>Upload</h3>
+          <p>Zone future d’import des fichiers et des éléments utiles.</p>
+        </article>
+        <article class="step">
+          <span class="step-index">02</span>
+          <h3>Analyse</h3>
+          <p>Zone future d’extraction, structuration et lecture des données.</p>
+        </article>
+        <article class="step">
+          <span class="step-index">03</span>
+          <h3>Génération</h3>
+          <p>Zone future des variantes et sorties utilisables.</p>
+        </article>
+        <article class="step">
+          <span class="step-index">04</span>
+          <h3>Contrôle</h3>
+          <p>Zone future de vérification et d’amélioration des résultats.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-head">
+        <p class="eyebrow">Écrans cibles</p>
+        <h2>Blocs à prototyper ensuite</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Écran</span>
+          <h3>Dashboard</h3>
+          <p>Vue globale, état des projets et accès rapide aux modules.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Écran</span>
+          <h3>Profil structuré</h3>
+          <p>Lecture propre des éléments extraits et des informations utiles.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Écran</span>
+          <h3>Cible structurée</h3>
+          <p>Lecture claire des attentes et des priorités de la cible visée.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Écran</span>
+          <h3>Comparaison</h3>
+          <p>Écart entre profil et cible, avec signaux visuels simples.</p>
+        </article>
+      </div>
     </section>
   </main>
 

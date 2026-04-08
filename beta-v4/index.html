@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobflow Studio Beta V4</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <button id="toTopBtn" class="to-top" aria-label="Remonter en haut">↑</button>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Beta Workspace — V4</p>
+        <h1>Jobflow Studio Beta V4</h1>
+        <p class="lead">Prototype local enrichi avec projets sauvegardés, copie rapide et export texte des sorties.</p>
+      </div>
+    </header>
+
+    <section class="grid two-cols">
+      <article class="panel">
+        <h2>Projet</h2>
+        <div class="field"><label for="projectPicker">Projet sauvegardé</label><select id="projectPicker"></select></div>
+        <div class="field"><label for="projectName">Projet</label><input id="projectName" type="text" placeholder="Ex. Poste visé" /></div>
+        <div class="field"><label for="companyName">Entreprise</label><input id="companyName" type="text" placeholder="Ex. Nom de l'entreprise" /></div>
+        <div class="field"><label for="targetText">Cible / contexte</label><textarea id="targetText" rows="6" placeholder="Description du contexte, exigences, éléments importants..."></textarea></div>
+        <div class="actions-row"><button id="saveProjectBtn">Enregistrer le projet</button><button id="deleteProjectBtn" class="ghost">Supprimer</button></div>
+      </article>
+
+      <article class="panel">
+        <h2>Source</h2>
+        <div class="field"><label for="sourceText">Texte de départ</label><textarea id="sourceText" rows="12" placeholder="Colle ici le texte de base ou charge un fichier .txt"></textarea></div>
+        <div class="field"><label for="sourceFile">Fichier texte</label><input id="sourceFile" type="file" accept=".txt" /></div>
+        <div class="actions-row"><button id="analyzeBtn">Analyser</button><button id="generateBtn">Générer</button><button id="saveStateBtn" class="ghost">Sauvegarde rapide</button></div>
+      </article>
+    </section>
+
+    <section class="grid stats-grid">
+      <article class="panel stat"><span class="stat-label">Longueur</span><strong id="statLength">0</strong></article>
+      <article class="panel stat"><span class="stat-label">Mots</span><strong id="statWords">0</strong></article>
+      <article class="panel stat"><span class="stat-label">Phrases</span><strong id="statSentences">0</strong></article>
+      <article class="panel stat"><span class="stat-label">Mots-clés</span><strong id="statKeywords">—</strong></article>
+    </section>
+
+    <section class="grid two-cols">
+      <article class="panel">
+        <h2>Analyse</h2>
+        <div id="analysisOutput" class="output-block">Aucune analyse pour le moment.</div>
+      </article>
+      <article class="panel">
+        <h2>Sorties</h2>
+        <div class="output-stack">
+          <div>
+            <div class="output-head"><h3>Version A</h3><div class="actions-row"><button data-copy="outputA" class="ghost mini">Copier</button><button data-download="outputA" class="ghost mini">Exporter</button></div></div>
+            <textarea id="outputA" rows="6"></textarea>
+          </div>
+          <div>
+            <div class="output-head"><h3>Version B</h3><div class="actions-row"><button data-copy="outputB" class="ghost mini">Copier</button><button data-download="outputB" class="ghost mini">Exporter</button></div></div>
+            <textarea id="outputB" rows="6"></textarea>
+          </div>
+          <div>
+            <div class="output-head"><h3>Version C</h3><div class="actions-row"><button data-copy="outputC" class="ghost mini">Copier</button><button data-download="outputC" class="ghost mini">Exporter</button></div></div>
+            <textarea id="outputC" rows="6"></textarea>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
